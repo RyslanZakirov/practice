@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function(){
                 clearInterval(id_interval);
             }
             slider.style.left = "calc(" + current_shift + " + " + factor + "%)";
-            console.log("calc(" + current_shift + " + " + factor + "%)");
+            // console.log("calc(" + current_shift + " + " + factor + "%)");
             factor++;
 
         },8);
