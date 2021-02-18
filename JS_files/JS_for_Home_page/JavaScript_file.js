@@ -242,8 +242,8 @@ document.addEventListener("DOMContentLoaded", function(){
         array_of_array[i] = [];
     }
 
-    let audio = new Audio();
-    audio.src = "naruto.mp3";
+    // let audio = new Audio();
+    // audio.src = "naruto.mp3";
 
     var image = null;
 
