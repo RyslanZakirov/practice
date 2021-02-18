@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS_files/CSS_for_Registration_page/Style_for_registation_page.css">
+    <title>Registration</title>
+</head>
+<body>
+    <div class = "loader">
+        <div class = "animation">
+            <p>
+                Page is loading
+                <br>
+                Waite, please 
+            </p>
+        </div>
+    </div>
+    <div class = "layer"></div>
+    <div class = "container">
+        <div class = "container_for_form">
+            <h2>Registration</h2>
+            <form action="#">
+                <input type = "text" placeholder = "Name:" required>
+                <input type = "email" placeholder = "Email:" required>
+                <input type = "password" placeholder = "Password:" required>
+                <input type = "password" placeholder = "Repeat password:" required>
+                <div class = "choose_sex">
+                    <input id = "sex_n1" type="radio" name = "sex"><label for="sex_n1">Women</label>
+                    <input id = "sex_n2" type="radio" name = "sex"><label for="sex_n2">Men</label>
+                </div>
+                <input type="button" value = "Sign up">
+                <p><a href="index.html">Вернуться на главную страницу</a></p>
+            </form>
+        </div>
+    </div>
+    <script type = "text/javascript" src = "JS_files/JS_common/Loader.js"></script>
+</body>
+</html>

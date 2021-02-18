@@ -1,0 +1,691 @@
+body{
+    margin: 0px;
+    overflow: hidden;
+}
+
+::-webkit-scrollbar {
+    height: 5px;
+    background-color: white;
+    border-left: 2px solid black;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: white;
+    border: 2px solid black;
+}
+
+.loader{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    position: fixed;
+    z-index: 103;
+}
+
+.loader .animation{
+    width: 280px;
+    height: 120px;
+    display: inline-block;
+    position: relative;
+    top: calc(50% - 75px);
+    left: calc(50% - 140px);
+    padding: 15px 20px 20px 20px;
+    box-sizing: border-box;
+    border: 2px solid white;
+    animation: sparkle_border 5s infinite linear alternate;
+}
+
+@keyframes sparkle_border{
+    0%{
+        border-color: #ff0000;
+    }
+    20%{
+        border-color: #6eff00;
+    }
+    40%{
+        border-color:#6eff00;
+    }
+    60%{
+        border-color: #ff05e0;
+    }
+    80%{
+        border-color: #00fcc2;
+    }
+    100%{
+        border-color: #6e00ff;
+    }
+}
+
+.loader .animation p{
+    text-align: center;
+    color: white;
+    font-size: 28px;
+    font-weight: 900;
+    font-family: sans-serif;
+    margin: 0px;
+    animation: sparkle_text 5s infinite linear alternate;
+}
+
+@keyframes sparkle_text{
+    0%{
+        color: #8b6010;
+    }
+    20%{
+        color: #6eff00;
+    }
+    40%{
+        color:#6eff00;
+    }
+    60%{
+        color: #ff05e0;
+    }
+    80%{
+        color: #00fcc2;
+    }
+    100%{
+        color: #6e00ff;
+    }
+}
+
+.music_loader{
+    position: fixed;
+    display: none;
+    border-radius: 5px;
+    padding: 10px;
+    top: 20%;
+    left: 20%;
+    background-color: #1b2022;
+    z-index: 104;
+    box-shadow: 0px 0px 9px 3px white;
+}
+
+.music_loader input{
+    outline: none;
+}
+
+.first_list{
+    height: 100vh;
+    width: 100%;
+    background-color: ivory;
+    background-image: url(https://img3.goodfon.ru/original/2560x1440/2/77/shahmaty-igra-fon-186.jpg);
+    background-size: cover;
+    overflow: hidden;
+}
+
+.first_list .dark_layer{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    background-color: black;
+    opacity: 0.45;
+}
+
+.first_list .menu{
+    width: 100%;
+    height: 7%;
+    background-color: #1a1a1a;
+    position: fixed;
+    z-index: 102;
+}
+
+.first_list .list_menu{
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+    line-height: 7vh;
+    background-color: #1a1a1a;
+}
+
+.list_menu li{
+    height: 100%;
+    display: inline-block;
+    margin: 0px 20px 0px 20px;
+    padding: 0px 10px 0px 10px;
+    text-align: center;
+}
+
+.list_menu > li:hover{
+    background-color: white;
+}
+
+.list_menu li:hover > a{
+    color: black;
+}
+
+.list_menu a{
+    text-decoration: none;
+    color:white;
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: 700;
+}
+
+.list_menu .play_list{
+    position: relative;
+}
+
+.list_menu .play_list:hover > ul{
+    display: block;
+}
+
+.list_menu .play_list a{
+    display: block;
+}
+
+.play_list .music_control{
+    padding: 5px;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    background-color: #00000094;
+}
+
+.music_control li{
+    display: flex;
+    align-items: center;
+}
+
+.music_control #music_list{
+    width: 200px;
+    height: 30px;
+    background-color: white;
+    outline: none;
+    font-size: 18px;
+    font-family: sans-serif;
+}
+
+.music_control .panel_control{
+    margin-left: 30px;
+    box-sizing: border-box;
+}
+
+.music_control .panel_control .range{
+    display: block;
+}
+
+.music_control .panel_control .button_control button{
+    background-color: white;
+    width: 64px;
+    box-sizing: border-box;
+    padding: 6px;
+    font-size: 14px;
+    font-family: sans-serif;
+    outline: none;
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 0 3px 0px #ffffff;
+}
+
+.music_control .panel_control .button_control button:hover{
+    box-shadow: 0 0 3px 0px #000000;
+    background-color: black;
+    color: white;
+}
+
+.range{
+    border-radius:5px;
+    height:10px;
+    outline : none;
+}
+
+.menu .list_menu .show_music{
+    height: 100%;
+    display: inline-block;
+    margin: 0px 20px 0px 20px;
+    padding: 0px 10px 0px 10px;
+    border-left: 2px solid white;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: 700;
+}
+
+.menu .list_menu .effect{
+    animation: color 4s infinite alternate;
+}
+
+@keyframes color{
+    100%{
+        text-shadow: 1px 1px 14px #ffffff, 0 0 4px black;
+    }
+}
+
+.first_list .left_switch, .right_switch{
+    width: 40px;
+    height: 50px;
+    border-radius: 6px;
+    background-color: #0000001f;
+    position: absolute;
+    top: calc(50% - 25px);
+    text-align: center;
+    z-index: 10;
+    outline: none;
+    border: none;
+}
+
+.first_list .right_switch{
+    right: 3%;
+}
+
+.first_list .left_switch{
+    left: 3%;
+}
+
+.first_list .left_switch::before{
+    content: "<";
+    color: #8080806b;
+    font-size: 34px;
+    font-weight: 900;
+}
+
+.first_list .right_switch::before{
+    content: ">";
+    color: #8080806b;
+    font-size: 34px;
+    font-weight: 900;
+}
+
+.right_switch:enabled:hover, .left_switch:enabled:hover{
+    opacity: 0.7;
+    box-shadow: 0px 0px 10px 0px #0b080840;
+}
+
+.first_list .slider{
+    position: relative;
+    display: flex;
+    left: -200%;
+    width: 500%;
+    height: 450px;
+    margin: 0px;
+    padding: 0px;
+    top: calc(40% - 150px);
+}
+
+.first_list .slider > div{
+    width: calc(20% - 250px);
+    margin: 0px 125px 0px 125px;
+    box-sizing: border-box;
+    height: inherit;
+}
+
+.first_slide, .second_slide, .third_slide,
+.fourth_slide, .fifth_slide{
+    border-radius: 40px;
+    box-shadow: 0 0 1px 0px #fdfdfdb5;
+    display: flex;
+}
+
+
+.image{
+    width: 35%;
+    height: inherit;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 40px 0px 0px 40px;
+}
+
+.first_picture{
+    background-image: url(https://kadun.ru/media/item/shashki-avrora-iz-krasnogo-dereva_2.jpg.1000x1200_q85.jpg);
+}
+
+.second_picture{
+    background-image: url(https://iphone-image.apkpure.com/v2/app/7/8/6/7865e875dab3c5e3537987b0a8633cf7.jpg);
+}
+
+.third_picture{
+    background-image: url(http://just-gifts.ru/wa-data/public/shop/products/49/24/12449/images/8527/Chess_kadun_retro_70.jpg.1000x1200_q85.jpg.750x0.jpg);
+}
+
+.fourth_picture{
+    background-image: url(http://a1722.phobos.apple.com/us/r30/Purple3/v4/30/ec/c2/30ecc294-7cb4-3b02-6c35-3151bef5b5f7/mzl.tobbabbx.png);
+}
+
+.fifth_picture{
+    background-image: url(https://i.pinimg.com/736x/1d/5b/70/1d5b70e27053d60798b61d023253b3d5.jpg);
+}
+
+.information_common_property{
+    width: 65%;
+    box-sizing: border-box;
+    padding: 25px 40px 25px 40px;
+    height: inherit;
+    background-color: #12100b80;
+    border-radius: 0px 40px 40px 0px;
+    overflow: auto;
+}
+
+.information_common_property h2{
+    text-align: center;
+    margin: 0px 0px 10px 0px;
+    color:ghostwhite;
+    font-size: xx-large;
+}
+
+.information_common_property p{
+    margin: 0px;
+    text-indent: 30px;
+    font-size: 19px;
+    font-weight: 900;
+    font-family: sans-serif;
+    color:ghostwhite;
+}
+
+.first_list .information_common_property .first_consultant p:nth-child(4){
+    text-indent: 0px;
+}
+
+.information_common_property .first_consultant li::marker{
+    color: #ff6a00;
+}
+
+.first_consultant {
+    margin-top: 8px;
+}
+
+.information_common_property .first_consultant a{
+    color: #ff6a00;
+    font-weight: 900;
+    font-size: 18px;
+    font-family: sans-serif;
+    text-decoration: none;
+}
+
+
+.information_common_property .second_consultant li::marker{
+    color: yellow;
+}
+
+.second_consultant{
+    margin-top: 8px;
+}
+
+.second_consultant li{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.information_common_property .second_consultant a{
+    color:yellow;
+    font-size: 18px;
+    font-weight: 900;
+    font-family: sans-serif; 
+    text-decoration: none;   
+}
+
+.second_slide .information_common_property p:nth-child(4){
+    text-indent: 0px;
+}
+
+.third_slide .information_common_property p:nth-child(4){
+    text-align: center;
+}
+
+.information_common_property .third_consultant li::marker{
+    color: greenyellow;
+}
+
+.third_consultant{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 8px;
+}
+
+.information_common_property .third_consultant a{
+    font-size: 18px;
+    font-weight: 900;
+    font-family: sans-serif;
+    color: greenyellow;
+    text-decoration: none;
+}
+
+.information_common_property .fourth_consultant li::marker{
+    color: #07ddff;
+}
+
+.fourth_consultant{
+    margin-top: 8px;
+}
+
+.fourth_slide .information_common_property p:nth-child(4){
+    text-indent: 0px;
+}
+
+.information_common_property .fourth_consultant a{
+    text-decoration: none;
+    font-size: 18px;
+    font-family: sans-serif;
+    font-weight: 900;
+    color: #07ddff;
+}
+
+.fifth_slide .information_common_property p:nth-child(4){
+    text-indent: 0px;
+}
+
+.information_common_property .fifth_consultant a{
+    color: gold;
+    font-size: 18px;
+    font-weight: 900;
+    font-family: sans-serif;
+    text-decoration: none;
+}
+
+.fifth_consultant{
+    margin-top: 8px;
+}
+
+.information_common_property .fifth_consultant li::marker{
+    color: gold;
+}
+
+.second_list{
+    background-image: url(https://static2.aniimg.com/upload/20170504/74/L/k/V/LkVDEF.jpg);
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    display: inline-block;
+    position: relative;
+}
+
+.second_list  .first_list_layer{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    background-color: black;
+    opacity: 0.6;
+}
+
+.second_list .main_field {
+    position: relative;
+    display: inline-block;
+    width: 320px;
+    height: 320px;
+    margin-right: 100px;
+    box-shadow: 0px 1px 20px 20px;
+}
+
+.second_list .inner_space{
+    width: 100%;
+    height: auto;
+    margin-top: calc(50vh - 160px);
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.selection_bar{
+    display: inline-block;
+    background-color: #ffffffd1;
+    color: black;
+    margin-left: 100px;
+    width: 450px;
+    border-radius: 30px;
+    padding: 15px;
+    box-sizing: border-box;
+    z-index: 100;
+}
+
+.selection_bar p{
+    margin: 0px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Times New Roman';
+}
+
+.selection_bar form{
+    text-align: center;
+}
+.selection_bar input{
+    display: none;
+}
+.selection_bar label{
+    margin: 5px;
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    padding: 4px;
+}
+
+input[type=radio]:checked + label {
+    background-color: #00000085;
+    border-radius: 30%;
+}
+
+.third_list{
+    height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 100px 100px;
+    background-image: url(https://bcn-a.akamaihd.net/img/blogs/blogs_chess__2.jpg);
+    background-size: cover;
+}
+
+.third_list .form_for_background{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.third_list .background{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    background-clip: content-box;
+    opacity: 0.55;
+    border-radius: 70px 20px;
+    box-shadow: 0px 0px 20px 0px #434546;
+
+}
+
+.third_list .description{
+    width: 100%;
+    position: absolute;
+    top: 0%;
+    height: 0%;
+    box-sizing: border-box;
+    padding: 10px 30px 30px 30px;
+}
+
+.third_list .header_theme{
+    text-align: center;
+    color: white;
+}
+.third_list .description p{
+    width: 100%;
+    height: 460px;
+    color: white;
+    font-family: sans-serif;
+    text-indent: 40px;
+    font-weight: 700;
+    font-size: 17px;
+    overflow: auto;
+} 
+
+.third_list .description p::-webkit-scrollbar-track{
+    background-color: black;
+    border-radius: 20px;
+}
+
+.third_list .description p::-webkit-scrollbar-thumb{
+    background-color: white;
+    border-radius: 20px;
+}
+
+.third_list .description p::-webkit-scrollbar{
+    width: 10px;
+}
+
+.footer{
+    width: 100%;
+    height: 30vh;
+    background-color: rgb(17 18 17);
+}
+
+.footer .main_info{
+    height: 100%;
+}
+
+.footer .main_info p:hover{
+    text-shadow: 0px 0px 5px white;
+}
+
+.footer .social_networks{
+    height: 100%;
+    width: 220px;
+    padding: 20px 50px 20px 20px;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+.footer .other_info{
+    height: 30vh;
+    position: absolute;
+    box-sizing: border-box;
+    padding: 20px 50px 20px 20px;
+    display: inline-block;
+}
+
+.footer  p{
+    margin: 0px;
+    padding: 10px;
+    height: 30px;
+}
+
+.footer a{
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    font-family: sans-serif;
+    font-weight: 700;
+}
+
+.scroll_button{
+    width: 45px;
+    height: 45px;
+    padding: 5px;
+    background-size: cover;
+    position: fixed;
+    bottom: 8vh;
+    right: 8vh;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    display: none;
+}
+
+.scroll_button:hover{
+    box-shadow: 0px 0px 20px 3px white;
+}
+.scroll_button img{
+    width: 35px;
+    border-radius: 10px;
+}
