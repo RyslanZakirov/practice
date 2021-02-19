@@ -331,23 +331,23 @@ body{
 }
 
 .first_picture{
-    background-image: url(https://kadun.ru/media/item/shashki-avrora-iz-krasnogo-dereva_2.jpg.1000x1200_q85.jpg);
+    background-image: url("../../Resources/images/shashki.jpg");
 }
 
 .second_picture{
-    background-image: url(https://iphone-image.apkpure.com/v2/app/7/8/6/7865e875dab3c5e3537987b0a8633cf7.jpg);
+    background-image: url("../../Resources/images/solitaire.jpg");
 }
 
 .third_picture{
-    background-image: url(http://just-gifts.ru/wa-data/public/shop/products/49/24/12449/images/8527/Chess_kadun_retro_70.jpg.1000x1200_q85.jpg.750x0.jpg);
+    background-image: url("../../Resources/images/chess.jpg");
 }
 
 .fourth_picture{
-    background-image: url(http://a1722.phobos.apple.com/us/r30/Purple3/v4/30/ec/c2/30ecc294-7cb4-3b02-6c35-3151bef5b5f7/mzl.tobbabbx.png);
+    background-image: url("../../Resources/images/minesweeper.png");
 }
 
 .fifth_picture{
-    background-image: url(https://i.pinimg.com/736x/1d/5b/70/1d5b70e27053d60798b61d023253b3d5.jpg);
+    background-image: url("../../Resources/images/tetris.jpg");
 }
 
 .information_common_property{
