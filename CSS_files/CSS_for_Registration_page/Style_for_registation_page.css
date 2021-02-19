@@ -107,7 +107,7 @@ body{
     margin: 150px auto;
     border: 2px solid white;
     border-radius: 25px;
-    background: url("http://rzhevcity.ru/upload/2019/05/shahmaty-v-podarok-23-fevralya-1024x1024.jpg");
+    background: url("../../Resources/images/chess_for_form.jpg");
     background-size: cover;
     box-shadow: 0px 0px 20px 0px;
 }
